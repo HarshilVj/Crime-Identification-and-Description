@@ -13,6 +13,7 @@ The system processes video inputs and outputs:
 
 ---
 
+
 ## 🚀 Technologies Used
 
 | Component                  | Technology                         |
