@@ -72,6 +72,8 @@ You will see:
 📝 Description (example: "The individual discreetly hides merchandise into their bag without making a payment.")
 
 Frames will be displayed with real-time overlays.
+![WhatsApp Image 2025-04-26 at 19 39 33_b91b0b93](https://github.com/user-attachments/assets/cf9df037-b3fe-4a4d-9e92-63052074cadb)
+
 
 📈 Model Performance
 
@@ -97,3 +99,5 @@ Expand to detect 5+ different crime types
 Improve real-time streaming support (CCTV integration)
 
 Fine-tune InternVideo specifically for surveillance footage
+
+(Contributor:ShreyanshAgarwal17)
