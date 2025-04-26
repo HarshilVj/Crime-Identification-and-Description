@@ -41,11 +41,15 @@ pip install decord av imageio
 pip install transformers==4.40.1 timm accelerate
 pip install flash-attn --no-build-isolation  # (Optional for speed boost)
 
-###3. Add Trained Models
-Place the trained crime detection model at:
-/content/crime_detection_model_2class.h5
+### 3. Add Trained Models
+Place the trained crime detection model:
+crime_detection_model_2class.h5 (trained model)
+
+The model was trained using a sequence of python scripts as provided in crime_training.
 Make sure you have a Hugging Face token (free account) for loading InternVideo. Set it like this in the code:
 os.environ["HF_TOKEN"] = "your_huggingface_token"
+
+
 📋 How It Works
 1. Pose Landmark Extraction
 The system uses MediaPipe Holistic to detect:
@@ -91,6 +95,8 @@ InternVideo Research Paper
 PyTorch Official Documentation
 
 TensorFlow Official Documentation
+
+UCF real world surveillance video dataset
 
 Decord GitHub Repository
 
