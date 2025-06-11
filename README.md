@@ -1,5 +1,5 @@
-# Crime-Detection-and-Description
-🕵️‍♂️ Crime Detection and Description Using BiLSTM, MediaPipe, and InternVideo v2.5
+# 🕵️‍♂️ Crime-Identification-and-sceneDescription
+Crime Identification and Description Using BiLSTM, MediaPipe, and InternVideo v2.5
 This project focuses on automatic crime detection and description from video footage.
 It combines a BiLSTM-based classifier (trained on pose landmarks extracted via MediaPipe Holistic) with a pretrained multimodal LLM (InternVideo v2.5) to generate natural language descriptions of detected activities.
 We focus on distinguishing between two different types of crimes which were generating an extraordinary accuracy of about 98% as compared with multi-class classification accuracy (around 85%) , that are:
@@ -50,13 +50,13 @@ Make sure you have a Hugging Face token (free account) for loading InternVideo. 
 os.environ["HF_TOKEN"] = "your_huggingface_token"
 
 
-📋 How It Works
-1. Pose Landmark Extraction
+## 📋 How It Works
+1. Pose Landmark Extraction-
 The system uses MediaPipe Holistic to detect:
 
-  Body pose (33 points)
-  Left and right hand landmarks (21 points each)
-These are stacked into a 225-dimensional feature vector per frame.
+       Body pose (33 points)
+       Left and right hand landmarks (21 points each)
+       These are stacked into a 225-dimensional feature vector per frame.
 
 2. Crime Prediction
 A custom-built BiLSTM + Attention model processes 100 frames and predicts the crime type.
@@ -67,10 +67,8 @@ InternVideo generates a detailed description tailored to the predicted crime, le
 4. Visualization
 Frames are shown with the predicted crime class overlaid for visual confirmation.
 
-▶️ How to Run the Project
-Make sure all dependencies and weights are set. Then simply run:
-python your_script_name.py (if running locally on your pc) or may be run directly as we did in google colab.
-You will see:
+## ▶️ Output Visualizations/Result
+Once the model is completely trained and set up, for evry new input/video stream you will see:
 
 🔹 Predicted Crime Class (example: Shoplifting)
 
@@ -80,31 +78,31 @@ Frames will be displayed with real-time overlays.
 ![WhatsApp Image 2025-04-26 at 19 39 33_b91b0b93](https://github.com/user-attachments/assets/cf9df037-b3fe-4a4d-9e92-63052074cadb)
 
 
-📈 Model Performance
+## 📈 Model Performance
 
-Metric	Value
-Classification Accuracy	98%
-Description Quality	Human-like
-The model has been trained on curated datasets and optimized using multiple rounds of augmentation, making it highly reliable even for challenging videos.
+Metric	Value-
+Achieved an extraoridinary Classification Accuracy around	98% for such a noisy and blurred dataset(for two class classification i.e. Shoplifting and Vandalism).
+Description Quality	were also almost Human-like.
 
-📚 References and Resources
-MediaPipe Holistic Documentation
 
-InternVideo Research Paper
+## 📚 References and Resources
+- MediaPipe Holistic Documentation
 
-PyTorch Official Documentation
+- InternVideo Research Paper
 
-TensorFlow Official Documentation
+- PyTorch Official Documentation
 
-UCF real world surveillance video dataset
+- TensorFlow Official Documentation
 
-Decord GitHub Repository
+- UCF real world surveillance video dataset and some self-made videos
 
-🚀 Future Scope
-Expand to detect 5+ different crime types
+- Decord GitHub Repository
 
-Improve real-time streaming support (CCTV integration)
+## 🚀 Future Scope
+1. Expand to detect 5+ different crime types
 
-Fine-tune InternVideo specifically for surveillance footage
+2. Improve real-time streaming support (CCTV integration)
+
+3. Fine-tune InternVideo specifically for surveillance footage
 
 (Contributor:ShreyanshAgarwal17)
